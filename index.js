@@ -39,7 +39,7 @@ const port = process.env.PORT || 8000;
 //=============================================
 
 async function connectToWA() {
-console.log("ᴍᴀʀɪᴀ-ᴍᴅ ᴄᴏɴɴᴇᴄᴛɪɴɢ...");
+console.log("maria-nd connecting...");
 const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info_baileys/')
 var { version } = await fetchLatestBaileysVersion()
 
@@ -59,15 +59,15 @@ if (lastDisconnect.error.output.statusCode !== DisconnectReason.loggedOut) {
 connectToWA()
 }
 } else if (connection === 'open') {
-console.log('😼 ᴍᴀʀɪᴀ-ᴍᴅ ᴘʟᴜɢɪɴs ɪɴsᴛᴀʟʟɪɴɢ... ')
+console.log('😼 maria-md plugins installing... ')
 const path = require('path');
 fs.readdirSync("./plugins/").forEach((plugin) => {
 if (path.extname(plugin).toLowerCase() == ".js") {
 require("./plugins/" + plugin);
 }
 });
-//console.log(`ᴘʟᴜɢɪɴs ɪɴsᴛᴀʟʟᴇᴅ✅: ${pluginCount}`)
-console.log('ᴍᴀʀɪᴀ-ᴍᴅ ᴄᴏɴɴᴇᴄᴛᴇᴅ ✅')
+//console.log(`plugins installed ✅: ${pluginCount}`)
+console.log('maria-md connected ✅')
 
 let up = `ᴍᴀʀɪᴀ-ᴍᴅ ᴄᴏɴɴᴇᴄᴛᴇᴅ✅\n\nᴏᴡɴᴇʀ: ${Config.Ownername}\n\nᴜsᴇʀ: ${conn.user?.id || "Unknown"}\n\nᴄᴏᴍᴍᴀɴᴅs: ${pluginCount}\n\nᴘʀᴇғɪx: ${prefix}`;
 
@@ -175,4 +175,4 @@ res.send("hey, bot started✅");
 app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
 setTimeout(() => {
 connectToWA()
-}, 4000);  
+}, 4000);
