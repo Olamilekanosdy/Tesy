@@ -6,7 +6,7 @@ function convertToBool(text, fault = 'true') {
 }
 module.exports = {
 ///=================When editing, do not accidentally delete anything !!MAIN-CONFIG=================================
-SESSION_ID: process.env.SESSION_ID || "U9RREZLI#C2xiSmj_cq6eb4VNHjlx2NpEXe2WVgHcMAS720gWq1k",
+SESSION_ID: process.env.SESSION_ID || "WRp3QKqQ#a4eteJmeoHKU6O_jO66dmDO1k2DP_vNVU4uN6LEH2Mk",
 TIME_ZONE: process.env.TIME_ZONE || "Africa/Lagos",
 LOCATION: "Ilorin/Nigeria",
 EMAIL: "fareedjimoh06@gmail.com",
